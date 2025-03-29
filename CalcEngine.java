@@ -4,6 +4,10 @@
  * @author Hacker T. Largebrain 
  * @version 1.0
  */
+/*
+ * Question 30
+ * the result should be 6 but for me its returning 0 so its wrong  
+ */
 public class CalcEngine
 {
     // The value in the display.
