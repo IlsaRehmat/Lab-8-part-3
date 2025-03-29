@@ -19,7 +19,7 @@ public class CalcEngine
     public CalcEngine()
     {
         displayValue = 0;
-        previousOperator = ' ';
+        previousOperator = '+';
         leftOperand = 0;
     }
 
@@ -66,12 +66,7 @@ public class CalcEngine
      */
     public void equals()
     {
-        if(previousOperator == '+') {
-            displayValue = leftOperand + displayValue;
-        }
-        else {
-            displayValue = leftOperand - displayValue;
-        }
+        applyPreviousOperator();
         leftOperand = 0;
     }
 
@@ -81,6 +76,8 @@ public class CalcEngine
     public void clear()
     {
         displayValue = 0;
+        leftOperand=0;
+        previousOperator = '+';
     }
 
     /**
@@ -125,5 +122,6 @@ public class CalcEngine
             // There was no preceding operator.
             leftOperand = displayValue;
         }
+        displayValue = 0;
     }
 }
